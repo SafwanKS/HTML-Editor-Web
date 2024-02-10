@@ -1,0 +1,66 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set default background color and text color for dark theme */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Toolbar styles */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #949494;
+  color: #fff;
+  padding: 8px;
+  max-width: 100%; /* Ensure toolbar fits the screen */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.material-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.material-button:hover {
+  background-color: #ddd;
+}
+
+.material-icon {
+  margin-right: 5px;
+  font-size: 18px; /* Adjust icon size */
+}
+
+.material-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px; /* Adjust text size */
+}
+
+/* Editor container styles */
+.editor-container {
+  margin-top: 20px;
+}
+
+.code-editor {
+  width: 100%;
+  height: calc(100vh - 100px);
+  resize: vertical;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px; /* Adjust font size for code editor */
+}

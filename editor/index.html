@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Editor</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="light-mode">
+  <div class="toolbar">
+    <button id="runBtn" class="material-button">
+      <span class="material-icon"></span>
+      <span class="material-text">Run</span>
+    </button>
+    <button id="saveBtn" class="material-button">
+      <span class="material-icon"></span>
+      <span class="material-text">Save</span>
+    </button>
+    <button id="undoBtn" class="material-button">
+      <span class="material-icon"></span>
+      <span class="material-text">Undo</span>
+    </button>
+    <button id="redoBtn" class="material-button">
+      <span class="material-icon"></span>
+      <span class="material-text">Redo</span>
+    </button>
+    <a href="https://html-editor-pro.vercel.app/pages/download.html" download class="material-button">
+      <span class="material-icon"></span>
+      <span class="material-text">Android App</span>
+    </a>
+  </div>
+  <div class="editor-container">
+    <textarea id="code" class="code-editor" placeholder="Write your code here..."></textarea>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
