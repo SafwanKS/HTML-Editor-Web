@@ -31,6 +31,7 @@ header {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures header is above other content */
 }
 
 header h1 {
@@ -47,7 +48,7 @@ header h1 {
   background-color: var(--surface-color);
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
-  z-index: 1000;
+  z-index: 1000; /* Ensures drawer is above other content */
   overflow-y: auto;
 }
 
@@ -82,7 +83,7 @@ header h1 {
   top: 16px;
   left: 16px;
   border-radius: 50%;
-  z-index: 1001;
+  z-index: 1100; /* Ensure it’s above the drawer */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -91,7 +92,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  margin-left: 0;
+  margin-left: 250px; /* Space for the drawer */
   transition: margin-left 0.3s ease;
 }
 
