@@ -103,9 +103,6 @@ document.addEventListener("DOMContentLoaded", function() {
         "stroke": {
           "width": 0,
           "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
         }
       },
       "opacity": {
@@ -142,12 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "random": false,
         "straight": false,
         "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
+        "bounce": false
       }
     },
     "interactivity": {
