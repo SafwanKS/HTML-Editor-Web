@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const modal = document.getElementById('modal');
   const closeButton = document.querySelector('.close');
   const fileNameInput = document.getElementById('fileNameInput');
+  const drawerBtn = document.querySelector('.drawer-btn');
+  const drawer = document.querySelector('.drawer');
   let startX = null;
 
   // Load file list from local storage on page load
@@ -17,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Event listener for save button in modal
   document.getElementById('saveFileBtn').addEventListener('click', saveFile);
+
+  // Event listener for drawer button to toggle drawer
+  drawerBtn.addEventListener('click', toggleDrawer);
 
   // Function to load file list from local storage
   function loadFileList() {
@@ -141,6 +146,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     modalStartX = null;
+  }
+
+  // Function to toggle drawer
+  function toggleDrawer() {
+    if (document.body.classList.contains('drawer-open')) {
+      document.body.classList.remove('drawer-open');
+    } else {
+      document.body.classList.add('drawer-open');
+    }
   }
 });
 
