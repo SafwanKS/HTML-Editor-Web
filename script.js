@@ -8,36 +8,25 @@ document.addEventListener("DOMContentLoaded", function() {
   const drawerToggle = document.getElementById('drawer-toggle');
   let startX = null;
 
-  // Load file list from local storage on page load
   loadFileList();
 
-  // Event listener for fab button to open modal
   fab.addEventListener('click', openModal);
-
-  // Event listener for close button to close modal
   closeButton.addEventListener('click', closeModal);
-
-  // Event listener for save button in modal
   document.getElementById('saveFileBtn').addEventListener('click', saveFile);
-
-  // Event listener for drawer toggle button
   drawerToggle.addEventListener('click', toggleDrawer);
 
-  // Function to load file list from local storage
   function loadFileList() {
-    fileList.innerHTML = ''; // Clear existing list
+    fileList.innerHTML = '';
     const files = Object.keys(localStorage);
     files.forEach(file => {
-      if (file !== 'savedContent') { // Exclude saved content key
+      if (file !== 'savedContent') {
         const li = document.createElement('li');
         li.textContent = file;
         li.addEventListener('click', function() {
           const selectedFileName = this.textContent;
-          // Redirect to editor page with selected file name as URL parameter
           window.location.href = `/editor/index.html?filename=${selectedFileName}`;
         });
 
-        // Swipe to delete gesture
         li.addEventListener('touchstart', handleTouchStart, false);
         li.addEventListener('touchmove', handleTouchMove, false);
 
@@ -46,28 +35,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Function to handle touch start event
   function handleTouchStart(event) {
     startX = event.touches[0].clientX;
   }
 
-  // Function to handle touch move event
   function handleTouchMove(event) {
-    if (!startX) {
-      return;
-    }
+    if (!startX) return;
 
     const xDiff = startX - event.touches[0].clientX;
 
     if (xDiff > 0) {
       const li = event.target.closest('li');
       if (li) {
-        // Show modal with delete option
         const confirmDelete = confirm(`Confirm deleting "${li.textContent}"`);
         if (confirmDelete) {
-          // Delete file from local storage
           localStorage.removeItem(li.textContent);
-          // Reload file list
           loadFileList();
         }
       }
@@ -76,44 +58,34 @@ document.addEventListener("DOMContentLoaded", function() {
     startX = null;
   }
 
-  // Function to open modal
   function openModal() {
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
   }
 
-  // Function to close modal
   function closeModal() {
     modal.style.display = 'none';
   }
 
-  // Function to save new file
   function saveFile() {
     const fileName = fileNameInput.value.trim();
     if (fileName !== '') {
-      // Save file name to local storage
       localStorage.setItem(fileName, '');
-      // Reload file list
       loadFileList();
-      // Close modal
       closeModal();
-      // Clear input
       fileNameInput.value = '';
     }
   }
 
-  // Function to toggle drawer
   function toggleDrawer() {
     drawer.classList.toggle('open');
   }
 
-  // Event listener to dismiss modal when clicking outside of it
   window.addEventListener('click', function(event) {
     if (event.target === modal) {
       closeModal();
     }
   });
 
-  // Initialize Particles.js
   particlesJS("particles-js", {
     "particles": {
       "number": {
