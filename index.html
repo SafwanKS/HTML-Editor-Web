@@ -3,66 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Editor PRO - with Ai</title>
-    <meta name="description" content="HTML Editor PRO - with Ai is a powerful HTML editor that includes artificial intelligence features to enhance your coding experience.">
-    <meta name="keywords" content="HTML editor, AI, artificial intelligence, coding, web development">
-    <meta name="HTML Editor PRO - WEB" content="ProTec Games">
-
-    <meta property="og:title" content="HTML Editor PRO - with Ai Web">
-    <meta property="og:description" content="HTML Editor PRO - with Ai is a powerful HTML editor that includes artificial intelligence features to enhance your coding experience.">
-    <meta property="og:image" content="/assets/preview.png">
-    <meta property="og:url" content="https://htmleditorpro netlify.app">
-    <meta property="og:type" content="website">
-    <meta property="og: HTML Editor Web" content="HTML Editor PRO - with Ai">
-
-    <meta name="twitter:card" content="/assets/preview.png">
-    <meta name="twitter:title" content="HTML Editor PRO - with Ai">
-    <meta name="twitter:description" content="HTML Editor PRO - with Ai is a powerful HTML editor that includes artificial intelligence features to enhance your coding experience.">
-    <meta name="twitter:image" content="/assets/preview.png">
-
-    <meta property="og:title" content="HTML Editor PRO - with Ai">
-    <meta property="og:description" content="HTML Editor PRO - with Ai is a powerful HTML editor that includes artificial intelligence features to enhance your coding experience.">
-    <meta property="og:image" content="/assets/logo.png">
-    <meta property="og:url" content="https://htmleditorpro.netlify.app">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="HTML Editor PRO - with Ai">
-
+    <title>File Manager</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="particles-js"></div>
-
-    <div id="app">
-        <header>
-            <h1>HTML Editor PRO - with Ai</h1>
-            <button id="drawerBtn" class="drawer-btn">&#9776; Menu</button>
-        </header>
-        <main>
-            <ul id="fileList"></ul>
-        </main>
-        <button id="fab">+</button>
+    <div class="toolbar">
+        <button class="drawer-btn">&#9776;</button>
+        <h1>File Manager</h1>
     </div>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 style="text-align: center;">Enter file name</h2>
-            <input type="text" id="fileNameInput" placeholder="File name">
-            <div style="text-align: center;">
+    <div class="drawer">
+        <div class="drawer-header">
+            <h2>Menu</h2>
+        </div>
+        <ul id="fileList"></ul>
+    </div>
+
+    <div class="main-content">
+        <button id="fab">+</button>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add New File</h2>
+                <input type="text" id="fileNameInput" placeholder="Enter file name">
                 <button id="saveFileBtn">Save</button>
             </div>
         </div>
+        <div id="particles-js"></div>
     </div>
 
-    <div id="drawer" class="drawer">
-        <div class="drawer-content">
-            <a href="/public-projects">Public Projects</a>
-            <a href="https://your-upgrade-url.com">Upgrade Account</a>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
