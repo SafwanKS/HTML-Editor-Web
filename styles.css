@@ -22,7 +22,7 @@ header {
 }
 
 header h1 {
-  margin: 0;
+  display: none; /* Hide the title */
 }
 
 #drawer {
@@ -188,4 +188,51 @@ button:hover {
 
 #fileList li:hover {
   background-color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #drawer {
+    width: 200px;
+  }
+
+  #drawer.open {
+    transform: translateX(200px);
+  }
+
+  #drawer-toggle {
+    top: 12px;
+    left: 12px;
+  }
+
+  #app {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  #drawer {
+    width: 160px;
+  }
+
+  #drawer.open {
+    transform: translateX(160px);
+  }
+
+  #drawer-toggle {
+    top: 8px;
+    left: 8px;
+    font-size: 20px;
+  }
+
+  #fab {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-width: none;
+  }
 }
