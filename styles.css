@@ -70,11 +70,15 @@ header h1 {
   left: 16px;
   border-radius: 50%;
   z-index: 1001;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 #drawer-toggle:hover {
   background-color: #333;
+}
+
+#drawer-toggle.open {
+  transform: rotate(90deg);
 }
 
 #app {
@@ -84,10 +88,6 @@ header h1 {
   padding: 16px;
   margin-left: 0;
   transition: margin-left 0.3s ease;
-}
-
-#app header {
-  margin-left: 0;
 }
 
 #fab {
