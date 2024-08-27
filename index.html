@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Manager</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Editor PRO - with AI</title>
+  <meta name="description" content="HTML Editor PRO - with AI is a powerful HTML editor that includes artificial intelligence features to enhance your coding experience.">
+  <meta name="keywords" content="HTML editor, AI, artificial intelligence, coding, web development">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="toolbar">
-        <button class="drawer-btn">&#9776;</button>
-        <h1>File Manager</h1>
-    </div>
-
-    <div class="drawer">
-        <div class="drawer-header">
-            <h2>Menu</h2>
-        </div>
-        <ul id="fileList"></ul>
-    </div>
-
-    <div class="main-content">
-        <button id="fab">+</button>
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Add New File</h2>
-                <input type="text" id="fileNameInput" placeholder="Enter file name">
-                <button id="saveFileBtn">Save</button>
-            </div>
-        </div>
-        <div id="particles-js"></div>
-    </div>
-
-    <script src="particles.js"></script>
-    <script src="script.js"></script>
+  <div id="particles-js"></div>
+  <div id="app">
+    <header class="toolbar">
+      <button id="drawerToggle">&#9776;</button>
+      <h1>HTML Editor PRO - with AI</h1>
+    </header>
+    <aside id="drawer" class="drawer">
+      <ul>
+        <li onclick="openPublicProjects()">Public Projects</li>
+        <li onclick="upgradeAccount()">Upgrade Account</li>
+      </ul>
+    </aside>
+    <main>
+      <textarea id="editor" placeholder="Start coding..."></textarea>
+      <button id="runButton">Run</button>
+      <iframe id="outputFrame"></iframe>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
