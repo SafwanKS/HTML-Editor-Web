@@ -29,8 +29,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  position: fixed;
+  top: 0;
 }
 
 header h1 {
@@ -93,6 +96,7 @@ header h1 {
   padding: 16px;
   margin-left: 250px;
   transition: margin-left 0.3s ease;
+  margin-top: 64px; /* Adjust for header height */
 }
 
 #fab {
@@ -194,4 +198,32 @@ button:hover {
 
 #fileList li:hover {
   background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  #drawer {
+    width: 200px;
+  }
+  
+  #drawer.open {
+    transform: translateX(200px);
+  }
+
+  #app {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  #drawer-toggle {
+    top: 8px;
+    left: 8px;
+    padding: 12px;
+    font-size: 20px;
+  }
+  
+  #fab {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
 }
